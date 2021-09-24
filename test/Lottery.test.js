@@ -66,4 +66,17 @@ it('allows multiple accounts to enter', async ()=>{
     assert.equal(3, players.length);
 });
 
+it('requires a minimum ampount of ether to enter', async ()=>{
+    try{
+        await lottery.methods.enter().send({
+            from: accounts[0],
+            value: 10
+        }); 
+        assert(false); 
+    }
+   catch (err){
+       assert(err);
+   }
+});
+
 });
