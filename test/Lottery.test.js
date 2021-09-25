@@ -110,5 +110,7 @@ const difference = finalBalance - initialBalance;
 console.log(difference);
 assert(difference > web3.utils.toWei('1.8', 'ether'));
 
+
+
 });
 });
